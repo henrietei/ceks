@@ -1,3 +1,6 @@
+
+from datetime import datetime
+
 class Ceks:
 
     def __init__(self, prece=None, daudzums=None, cena=None):
@@ -19,10 +22,20 @@ file.close()
 
 
 
+# datetime object containing current date and time
+now = datetime.now()
+ 
+#print("now =", now)
+
+# dd/mm/YY H:M:S
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+print("date and time =", dt_string)	
 
 
 
-print(f"SIA MK TRADE \nVeikals RD Electronics \nDārzu iela 14a, Rēzekne, t. 438473 \nKase Nr.2, Šas. Nr. 472493473 \nKrasta iela 105A \nRīga, LV-1019 \nČeka numurs {str1}")
+
+
+print(f"SIA MK TRADE \nVeikals RD Electronics \nDārzu iela 14a, Rēzekne, t. 438473 \nKase Nr.2, Šas. Nr. 472493473 \nKrasta iela 105A \nRīga, LV-1019 \nČeka numurs {str1}\n{dt_string}")
 
 ceks1=Ceks("virtuves kombains", 1, 58.99)
 ceks2=Ceks("blenderis", 2, 49.99)
